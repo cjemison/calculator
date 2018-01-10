@@ -3,6 +3,11 @@ import java.util.Stack;
 
 public class App {
 
+  public static void main(String[] args) {
+    final App app = new App();
+    System.out.println(app.run(args[0]));
+  }
+
   public int run(final String line) {
     Objects.requireNonNull(line);
     if (!line.trim().equals("")) {
@@ -50,7 +55,6 @@ public class App {
     return reverseStack;
   }
 
-
   private int apply(final int a, final int b, final String operation) {
     if (operation.equals("+")) {
       return a + b;
@@ -60,7 +64,6 @@ public class App {
       return a * b;
     }
   }
-
 
   private boolean isInteger(final String value) {
     try {
